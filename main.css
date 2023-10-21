@@ -1,0 +1,339 @@
+/* Hide specific elements */
+.homepage #catAbb,
+.homepage #go,
+.homepage .leftlinks #cl_app_beta,
+.no-js,
+p.more {
+  display: none;
+}
+
+/* Style the logo */
+#logo {
+  font-size: 2.5rem;
+  color: #b300ff; /* Text color */
+  /* text-shadow: 2px 2px 4px #666;  */
+}
+
+/* Style the search box */
+.homepage-search .querybox {
+  border: none;
+  border-bottom: 2px solid #464646;
+  font-size: 16px;
+  background-color: #f0f0f0; /* Background color */
+  color: #b300ff;
+}
+
+/* Make the menu items expandable and add a hover effect */
+.menu.collapsible > li {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu.collapsible > li.expand.s ul {
+  display: block;
+}
+
+.menu.collapsible > li ul {
+  display: none;
+}
+
+.menu.collapsible > li:hover {
+  background-color: #45a049; /* Background color on hover */
+}
+
+
+
+
+/* Universal Styles */
+* {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+/* Tag Selectors */
+a {
+  text-decoration: none;
+}
+
+
+#logo a {
+  color: purple;
+}
+
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* Pseudo-classes for Links */
+a:visited {
+  color: #800080;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #800080;
+}
+
+a > span:hover {
+  font-weight: bold;
+  color: #800080;
+}
+
+/* Styles for Main Page Sections */
+.page-container {
+  max-width: 1200px;
+  
+}
+
+#leftbar, #center, #rightbar {
+  float: left;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+footer {
+  clear: both;
+}
+
+#leftbar, #rightbar {
+  width: 25%;
+}
+
+#center {
+  width: 50%;
+  border: 1px solid #464646;
+  border-radius: 10px;
+}
+
+#center > div {
+  float: left;
+  width: 33%;
+}
+
+#topban h2 {
+  text-align: center;
+}
+
+/* Footer List Styles */
+ul.clfooter {
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+ul.clfooter > li {
+  display: inline;
+  padding-right: 5px;
+}
+
+/* Calendar Styles */
+.cal td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style non-link days */
+.cal td:not(.cal .hastip) {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+/* Highlight today */
+.cal .today {
+  background-color: darkviolet;
+  color: white;
+}
+
+/* Hover effect on calendar cells */
+.cal td.caldata:hover {
+  background-color: lavender;
+}
+
+.header {
+  background: linear-gradient(to bottom, #800080, #4B0082);
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 2.5rem;
+  padding: 100px;
+  text-align: center;
+  animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(to bottom, #800080, #4B0082);
+  }
+  100% {
+    background: linear-gradient(to bottom, #4B0082, #800080);
+  }
+}
+
+/* Add a pulsating effect to the button */
+.button {
+  background: linear-gradient(to bottom, #4CAF50, #45a049);
+  color: white;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s, border 0.3s, transform 0.3s;
+  animation: pulseAnimation 1s infinite;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #45a049, #4CAF50);
+  border: 2px solid #45a049;
+  transform: scale(1.05);
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add a slide-in animation to the footer list */
+ul.clfooter > li {
+  display: inline;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+  animation: slideInAnimation 1s both;
+}
+
+ul.clfooter > li:hover {
+  background-color: #800080;
+  color: white;
+  transform: translateY(-5px);
+}
+
+@keyframes slideInAnimation {
+  0% {
+    transform: translateX(-100%);
+  opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Add a bounce effect to the calendar today cell */
+.cal .today {
+  animation: bounceAnimation 1s infinite;
+}
+
+@keyframes bounceAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Update the navbar with a translucent background and smoother hover effect */
+.navbar {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.navbar a:hover {
+  background-color: #800080;
+  color: white;
+}
+
+/* Style the card with a subtle shadow and a fancy border */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Give buttons a 3D look with a gradient border */
+.button {
+  background: linear-gradient(to bottom, #4CAF50, #45a049);
+  color: white;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s, border 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #45a049, #4CAF50);
+  border: 2px solid #45a049;
+  transform: scale(1.05);
+}
+
+/* Style the page-container with a subtle drop shadow */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a fancy border to the footer list */
+ul.clfooter {
+  border: 2px solid #800080;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+/* Add some interactivity to the footer list items */
+ul.clfooter > li {
+  display: inline;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+ul.clfooter > li:hover {
+  background-color: #800080;
+  color: white;
+}
+
+/* Highlight the calendar today cell with a pulsating effect */
+.cal .today {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: darkviolet;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #800080;
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: darkviolet;
+    transform: scale(1);
+  }
+}
